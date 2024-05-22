@@ -10,23 +10,20 @@
   margin:0 auto;
 }
 .boxes input {
-  width: 400px;
-  height: 40px;
+  width: 40%;
+  height: 35%;
   border-radius: 3px;
   padding: 10px;
-  margin-top: 20px;
-  position:relative;
+  margin-top: 2%;
   border:none;
 }
 .boxes h1 {
-  padding-top: 30px;
+  padding-top: 3%;
   color: white;
 }
 .btn {
-  width: 100px;
-  height: 40px;
-  top: 112px;
-  left: 569px;
+  width: 10%;
+  height: 42px;
   border-radius: 3px;
   border: none;
   background: rgba(237, 48, 82, 1);
@@ -34,36 +31,34 @@
 }
 
 .weather {
-  padding: 20px;
+  padding: 7%;
 }
 .weather-img {
-  padding-top: 50px;
+  padding-top: 20%;
 }
 
 .blocks {
   width: 29%;
-  height: 325px;
-  top: 266px;
-  left: 35rem;
-  padding-top: 30px;
+  height: 325%;
+  margin-top: 10%;
+  margin-left: 36%;
+  padding-top: 2%;
   display: flex;
-
-
-  position: absolute; 
   z-index: 99;
   background-color: white;
   box-shadow: 2px 3px 10px 10px rgba(190, 188, 188, 0.183);
-  border-radius: 12px;
+  border-radius: 6%;
   border: 1px solid grey;
-  gap: 5rem;
+  gap: 2rem;
   border: none;
 }
 .weatherName {
   width: 102px;
   font-size: 38px;
   font-weight: 800;
-  line-height: 33.18px;
-  text-align: left;
+  /* line-height: 33.18px; */
+  /* text-align: left; */
+  /* background:red; */
 }
 .temp {
   font-family: Rubik;
@@ -88,7 +83,7 @@
   text-align: left;
 }
 .winds {
-  padding-top: 20px;
+  padding-top: 10%;
 }
 .load {
   text-align: center;
@@ -100,18 +95,3 @@
   height:200px;
 }
 
-@media (min-width:1200px){
- 
-}
-@media (min-width:992px){
- 
-}
-@media (min-width:768px){
- 
-}
-@media (min-width:480px){
- 
-}
-@media (min-width:320px){
- 
-}
