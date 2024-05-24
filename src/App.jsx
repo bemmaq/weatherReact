@@ -56,45 +56,127 @@ const App = () => {
   }, []);
 
   if (!cityData) {
-    return <h1 className="load">Loading...</h1>;
+    return (
+      <h1 style={{ textAlign: "center", paddingTop: "10rem", color: "red" }}>
+        Loading...
+      </h1>
+    );
   }
   if (cityData.cod == 404) {
-    return <h1 className="load">{cityData.message}</h1>;
+    return <h1>{cityData.message}</h1>;
   }
 
   return (
-    <div className="content">
+    <div
+      style={{
+        background: "linear-gradient(92.7deg, #4cb8c4 0%, #3cd3ad 100%)",
+        height: "200px",
+      }}
+    >
       <div className="container">
-        <div className="content_weather">
-          <div className="boxes">
-            <h1>Weather forecast</h1>
+        <div>
+          <div>
+            <h1
+              style={{ paddingTop: "3%", color: "white" }}
+              className="text-3xl"
+            >
+              Weather forecast
+            </h1>
             <input
+            className="w-[40%] sm:w-[50%]"
+              style={{
+                
+                height: "35%",
+                borderRadius: "3px",
+                padding: "10px",
+                marginTop: "2%",
+                border: "none",
+              }}
               value={cityName}
               onChange={(e) => setCityName(e.target.value)}
               type="text"
               placeholder="Enter the name of the city"
             />
-            <button className="btn" onClick={() => fetchWeather(cityName)}>
+            <button
+              style={{
+                width: "10%",
+                height: "42px",
+                borderRadius: "3px",
+                border: "none",
+                background: "rgba(237, 48, 82, 1)",
+                color: "white",
+              }}
+              onClick={() => fetchWeather(cityName)}
+            >
               Show
             </button>
           </div>
-          <div className="blocks">
-            <div className="weather">
-              <h3 className="weatherName">{cityData.name}</h3>
-              <div className="mathtemp">
-                <span className="temp">
+          <div className="w-full xl:w-[30%] lg:w-[38%] m-auto md:w-[49%] sm:w-[50%] sm:left-24 mt-40"
+    style={{
+        height: "325%",
+        marginLeft: "36%",
+        paddingTop: "2%",
+        display: "flex",
+        zIndex: "99",
+        backgroundColor: "white",
+        boxShadow: "2px 3px 10px 10px rgba(190, 188, 188, 0.183)",
+        borderRadius: "6%",
+        border: "1px solid grey",
+        gap: "2rem",
+        border: "none",
+    }}
+>
+          
+            <div style={{ padding: "7%" }}>
+              <h3
+                style={{ width: "102px", fontSize: "38px", fontWeight: "800" }}
+              >
+                {cityData.name}
+              </h3>
+              <div style={{ display: "flex" }}>
+                <span
+                  style={{
+                    fontFamily: "Rubik",
+                    fontSize: "70px",
+                    fontWeight: "400",
+                  }}
+                >
                   {Math.floor(cityData.main.temp - 273.15)}{" "}
                 </span>
-                <span className="temp1">°c</span>
+                <span
+                  style={{
+                    fontFamily: "Rubik",
+                    fontSize: "80px",
+                    fontWeight: "400",
+                    lineHeight: "92px",
+                    textAlign: "left",
+                  }}
+                >
+                  °c
+                </span>
               </div>
-              <div className="winds">
-                <p className="wind">{cityData.weather[0].main}</p>
-                <p className="wind">Wind: {cityData.wind.speed} km</p>
-                <p className="wind">Country: {cityData.sys.country}</p>
+              <div style={{ paddingTop: "10%" }}>
+                <div
+                  style={{
+                    fontFamily: "Rubik",
+                    fontSize: "20px",
+                    fontWeight: "400",
+                    lineHeight: "23.7px",
+                    textAlign: "left",
+                  }}
+                >
+                  <p>{cityData.weather[0].main}</p>
+                  <p>Wind: {cityData.wind.speed} km</p>
+                  <p>Country: {cityData.sys.country}</p>
+                </div>
               </div>
             </div>
-            <div className="weather-img">
-              <img src={weatherImg(cityData.weather[0].main)} alt="" />
+            <div>
+              <img
+                style={{ paddingTop: "57%" }}
+                src={weatherImg(cityData.weather[0].main)}
+                alt=""
+              />
             </div>
           </div>
         </div>

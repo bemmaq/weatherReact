@@ -9,35 +9,35 @@
   width:90%;
   margin:0 auto;
 }
-.boxes input {
+/* .boxes input {
   width: 40%;
   height: 35%;
   border-radius: 3px;
   padding: 10px;
   margin-top: 2%;
   border:none;
-}
-.boxes h1 {
+} */
+/* .boxes h1 {
   padding-top: 3%;
   color: white;
-}
-.btn {
+} */
+/* .btn {
   width: 10%;
   height: 42px;
   border-radius: 3px;
   border: none;
   background: rgba(237, 48, 82, 1);
   color: white;
-}
+} */
 
-.weather {
+/* .weather {
   padding: 7%;
-}
-.weather-img {
+} */
+/* .weather-img {
   padding-top: 20%;
-}
+} */
 
-.blocks {
+/* .blocks {
   width: 29%;
   height: 325%;
   margin-top: 10%;
@@ -51,47 +51,49 @@
   border: 1px solid grey;
   gap: 2rem;
   border: none;
-}
-.weatherName {
-  width: 102px;
+  
+} */
+/* .weatherName { */
+  /* width: 102px;
   font-size: 38px;
-  font-weight: 800;
+  font-weight: 800; */
   /* line-height: 33.18px; */
   /* text-align: left; */
   /* background:red; */
-}
-.temp {
-  font-family: Rubik;
+/* } */
+/* .temp { */
+  /* font-family: Rubik;
   font-size: 70px;
-  font-weight: 400;
-}
-.temp1 {
-  font-family: Rubik;
+  font-weight: 400; */
+/* } */
+/* .temp1 { */
+  /* font-family: Rubik;
   font-size: 80px;
   font-weight: 400;
   line-height: 92px;
-  text-align: left;
-}
-.mathtemp {
+  text-align: left; */
+/* } */
+/* .mathtemp {
   display: flex;
-}
-.wind {
+} */
+/* .wind {
   font-family: Rubik;
   font-size: 20px;
   font-weight: 400;
   line-height: 23.7px;
   text-align: left;
-}
-.winds {
+} */
+/* .winds {
   padding-top: 10%;
-}
-.load {
+} */
+/* .load {
   text-align: center;
   padding-top: 10rem;
   color: red;
-}
-.content{
+} */
+/* .content{
   background: linear-gradient(92.7deg, #4cb8c4 0%, #3cd3ad 100%);
   height:200px;
-}
+} */
+
 
