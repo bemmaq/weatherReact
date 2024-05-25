@@ -6,7 +6,11 @@ export default {
   ],
   theme: {
    
-    extend: {},
+    extend: {
+      screens: {
+        'sm-custom': '390px',  // Adding custom screen size
+      },
+    },
   },
   plugins: [],
 }

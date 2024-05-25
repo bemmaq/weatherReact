@@ -17,6 +17,7 @@ const App = () => {
   const fetchWeather = async (name = "Bishkek") => {
     try {
       const res = await fetch(`${_baseUrl}${name}&appid=${apiKey}`);
+
       const data = await res.json();
       console.log(data);
       setCityData(data);
@@ -29,16 +30,22 @@ const App = () => {
     switch (weather) {
       case "Rain":
         return Rain;
+
       case "Clouds":
         return Cloudy;
+
       case "Clear":
         return Clear;
+
       case "Snow":
         return Snow;
+
       case "Sun":
         return Sun;
+
       case "Mist":
         return Mist;
+
       default:
         return;
     }
@@ -76,8 +83,9 @@ const App = () => {
               Weather forecast
             </h1>
             <input
-              className="w-[40%] sm:w-[40%] lg:w-[30%]"
+            className="w-[40%] sm-w-[89%] sm-custom:w-[80%]"
               style={{
+                
                 height: "35%",
                 borderRadius: "3px",
                 padding: "10px",
@@ -91,35 +99,37 @@ const App = () => {
             />
             <button
               style={{
-                width: "10%",
+               
                 height: "42px",
                 borderRadius: "3px",
                 border: "none",
                 background: "rgba(237, 48, 82, 1)",
                 color: "white",
               }}
+              className="w-[10%] md:w-[10%] sm-custom:w-[20%]"
               onClick={() => fetchWeather(cityName)}
             >
               Show
             </button>
           </div>
-          <div
-            className="w-full xl:w-[30%] lg:w-[38%] md:w-[49%] sm:w-[50%] sm-custom:w-[55%]"
-            style={{
-              height: "325%",
-              margin: "auto",
-              marginTop: "10rem",
-              paddingTop: "2%",
-              display: "flex",
-              zIndex: "99",
-              backgroundColor: "white",
-              boxShadow: "2px 3px 10px 10px rgba(190, 188, 188, 0.183)",
-              borderRadius: "6%",
-              border: "1px solid grey",
-              gap: "2rem",
-              border: "none",
-            }}
-          >
+          <div className="w-full xl:w-[30%] lg:w-[38%]  md:w-[49%]  sm:w-[50%]  "
+    style={{
+        height: "325%",
+        margin:"auto",
+        marginTop:"10rem",
+        // marginLeft: "36%",
+        paddingTop: "2%",
+        display: "flex",
+        zIndex: "99",
+        backgroundColor: "white",
+        boxShadow: "2px 3px 10px 10px rgba(190, 188, 188, 0.183)",
+        borderRadius: "6%",
+        border: "1px solid grey",
+        gap: "2rem",
+        border: "none",
+    }}
+>
+          
             <div style={{ padding: "7%" }}>
               <h3
                 style={{ width: "102px", fontSize: "38px", fontWeight: "800" }}
