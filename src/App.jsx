@@ -17,7 +17,6 @@ const App = () => {
   const fetchWeather = async (name = "Bishkek") => {
     try {
       const res = await fetch(`${_baseUrl}${name}&appid=${apiKey}`);
-
       const data = await res.json();
       console.log(data);
       setCityData(data);
@@ -30,22 +29,16 @@ const App = () => {
     switch (weather) {
       case "Rain":
         return Rain;
-
       case "Clouds":
         return Cloudy;
-
       case "Clear":
         return Clear;
-
       case "Snow":
         return Snow;
-
       case "Sun":
         return Sun;
-
       case "Mist":
         return Mist;
-
       default:
         return;
     }
@@ -83,9 +76,8 @@ const App = () => {
               Weather forecast
             </h1>
             <input
-            className="w-[40%] sm:w-[50%]"
+              className="w-[40%] sm:w-[40%] lg:w-[30%]"
               style={{
-                
                 height: "35%",
                 borderRadius: "3px",
                 padding: "10px",
@@ -111,22 +103,23 @@ const App = () => {
               Show
             </button>
           </div>
-          <div className="w-full xl:w-[30%] lg:w-[38%] m-auto md:w-[49%] sm:w-[50%] sm:left-24 mt-40"
-    style={{
-        height: "325%",
-        marginLeft: "36%",
-        paddingTop: "2%",
-        display: "flex",
-        zIndex: "99",
-        backgroundColor: "white",
-        boxShadow: "2px 3px 10px 10px rgba(190, 188, 188, 0.183)",
-        borderRadius: "6%",
-        border: "1px solid grey",
-        gap: "2rem",
-        border: "none",
-    }}
->
-          
+          <div
+            className="w-full xl:w-[30%] lg:w-[38%] md:w-[49%] sm:w-[50%] sm-custom:w-[55%]"
+            style={{
+              height: "325%",
+              margin: "auto",
+              marginTop: "10rem",
+              paddingTop: "2%",
+              display: "flex",
+              zIndex: "99",
+              backgroundColor: "white",
+              boxShadow: "2px 3px 10px 10px rgba(190, 188, 188, 0.183)",
+              borderRadius: "6%",
+              border: "1px solid grey",
+              gap: "2rem",
+              border: "none",
+            }}
+          >
             <div style={{ padding: "7%" }}>
               <h3
                 style={{ width: "102px", fontSize: "38px", fontWeight: "800" }}
@@ -173,7 +166,7 @@ const App = () => {
             </div>
             <div>
               <img
-                style={{ paddingTop: "57%" }}
+                style={{ paddingTop: "70%" }}
                 src={weatherImg(cityData.weather[0].main)}
                 alt=""
               />
